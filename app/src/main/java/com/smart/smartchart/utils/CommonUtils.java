@@ -807,7 +807,6 @@ public class CommonUtils {
         }
 
     }
-
     //解决水平滑动布局和scrollview的滑动冲突
     public static void solveScrollConflict(View view, final ScrollView scrollView) {
         view.setOnTouchListener(new View.OnTouchListener() {
