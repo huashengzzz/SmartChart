@@ -1,0 +1,32 @@
+<resources>
+    <!-- 字体大小规范-->
+    <!-- 一级标题-->
+    <dimen name="font_size_18">18sp</dimen>
+    <!-- 二级标题-->
+    <dimen name="font_size_16">16sp</dimen>
+    <!-- 正文内容-->
+    <dimen name="font_size_14">14sp</dimen>
+    <!-- 提醒类文字-->
+    <dimen name="font_size_12">12sp</dimen>
+
+    <dimen name="font_size_15">15sp</dimen>
+
+    <dimen name="divider_line_height">0.5dp</dimen>
+
+    <!-- 通用栏目高度-->
+    <dimen name="column_height">43dp</dimen>
+    <!-- 栏目之间间距-->
+
+    <!-- 页面左右边距-->
+    <dimen name="page_margin">10dp</dimen>
+
+    <!-- 通用确定、取消按钮的页面左右边距-->
+    <!-- 行间距-->
+    <!-- main -->
+    <dimen name="main_tab_height">50dp</dimen>
+    <!-- actionsheet -->
+
+    <dimen name="vientiane_column_height">50dp</dimen>
+    <dimen name="padding_top">0dp</dimen>
+    <dimen name="mine_top">27dp</dimen>
+</resources>

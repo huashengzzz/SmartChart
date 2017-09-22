@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.smart.smartchart.widget.panellist.PanelListLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/id_pl_root"
+        android:background="@color/white">
+
+        <ListView
+            android:id="@+id/id_lv_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fastScrollEnabled="false"
+            android:overScrollMode="never"
+            android:divider="@null"
+            android:dividerHeight="0dp"/>
+
+    </com.smart.smartchart.widget.panellist.PanelListLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_trans_back"
+        android:layout_margin="15dp"/>
+</RelativeLayout>

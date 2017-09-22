@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SwipeBackLayout">
+        <attr name="edge_size" format="dimension"/>
+        <attr name="edge_flag">
+            <enum name="left" value="0"/>
+            <enum name="right" value="1"/>
+            <enum name="bottom" value="2"/>
+            <enum name="all" value="3"/>
+        </attr>
+        <attr name="shadow_left" format="reference"/>
+        <attr name="shadow_right" format="reference"/>
+        <attr name="shadow_bottom" format="reference"/>
+    </declare-styleable>
+
+    <attr name="SwipeBackLayoutStyle" format="reference"/>
+
+    <attr name="peakValue" format="dimension"/>
+    <attr name="waveColor" format="color" />
+    <attr name="speedOne" format="integer" />
+    <attr name="speedTwo" format="integer" />
+    <attr name="waveHeight" format="dimension" />
+
+    <declare-styleable name="DoubleWaveView">
+        <attr name="peakValue" />
+        <attr name="waveColor" />
+        <attr name="speedOne" />
+        <attr name="speedTwo" />
+        <attr name="waveHeight" />
+
+    </declare-styleable>
+
+    <declare-styleable name="WaveView">
+        <attr name="above_wave_color" format="color"/>
+        <attr name="blow_wave_color" format="color"/>
+        <attr name="progress" format="integer"/>
+        <attr name="wave_length" format="enum">
+            <enum name="large" value="1"/>
+            <enum name="middle" value="2"/>
+            <enum name="little" value="3"/>
+        </attr>
+        <attr name="wave_height" format="enum">
+            <enum name="large" value="1"/>
+            <enum name="middle" value="2"/>
+            <enum name="little" value="3"/>
+        </attr>
+        <attr name="wave_hz" format="enum">
+            <enum name="fast" value="1"/>
+            <enum name="normal" value="2"/>
+            <enum name="slow" value="3"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="Themes">
+        <attr name="waveViewStyle" format="reference"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="stl_SmartTabLayout">
+        <attr name="stl_indicatorAlwaysInCenter" format="boolean"/>
+        <attr name="stl_indicatorWithoutPadding" format="boolean"/>
+        <attr name="stl_indicatorInFront" format="boolean"/>
+        <attr name="stl_indicatorInterpolation" format="enum">
+            <enum name="smart" value="0"/>
+            <enum name="linear" value="1"/>
+        </attr>
+        <attr name="stl_indicatorGravity" format="enum">
+            <enum name="bottom" value="0"/>
+            <enum name="top" value="1"/>
+            <enum name="center" value="2"/>
+        </attr>
+        <attr name="stl_indicatorColor" format="color"/>
+        <attr name="stl_indicatorColors" format="reference"/>
+        <attr name="stl_indicatorThickness" format="dimension"/>
+        <attr name="stl_indicatorWidth" format="dimension">
+            <enum name="auto" value="-1"/>
+        </attr>
+        <attr name="stl_indicatorCornerRadius" format="dimension"/>
+        <attr name="stl_overlineColor" format="color"/>
+        <attr name="stl_overlineThickness" format="dimension"/>
+        <attr name="stl_underlineColor" format="color"/>
+        <attr name="stl_underlineThickness" format="dimension"/>
+        <attr name="stl_dividerColor" format="color"/>
+        <attr name="stl_dividerColors" format="reference"/>
+        <attr name="stl_dividerThickness" format="dimension"/>
+        <attr name="stl_defaultTabBackground" format="reference"/>
+        <attr name="stl_defaultTabTextAllCaps" format="boolean"/>
+        <attr name="stl_defaultTabTextColor" format="color|reference"/>
+        <attr name="stl_defaultTabTextSize" format="dimension"/>
+        <attr name="stl_defaultTabTextHorizontalPadding" format="dimension"/>
+        <attr name="stl_defaultTabTextMinWidth" format="dimension"/>
+        <attr name="stl_customTabTextLayoutId" format="reference"/>
+        <attr name="stl_customTabTextViewId" format="reference"/>
+        <attr name="stl_distributeEvenly" format="boolean"/>
+        <attr name="stl_clickable" format="boolean"/>
+        <attr name="stl_titleOffset" format="dimension">
+            <enum name="auto_center" value="-1"/>
+        </attr>
+        <attr name="stl_drawDecorationAfterTab" format="boolean"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="NumberPickerView">
+        <!--set number of item displayed, default is 3-->
+        <attr name="npv_ShowCount" format="reference|integer" />
+        <!--set if show divider, default is true-->
+        <attr name="npv_ShowDivider" format="reference|boolean" />
+        <attr name="npv_DividerColor" format="reference|color" />
+        <attr name="npv_DividerMarginLeft" format="reference|dimension" />
+        <attr name="npv_DividerMarginRight" format="reference|dimension" />
+        <attr name="npv_DividerHeight" format="reference|dimension" />
+        <attr name="npv_TextColorNormal" format="reference|color" />
+        <attr name="npv_TextColorSelected" format="reference|color" />
+        <attr name="npv_TextColorHint" format="reference|color" />
+        <attr name="npv_TextSizeNormal" format="reference|dimension" />
+        <attr name="npv_TextSizeSelected" format="reference|dimension" />
+        <attr name="npv_TextSizeHint" format="reference|dimension" />
+        <attr name="npv_TextArray" format="reference" />
+        <attr name="npv_MinValue" format="reference|integer" />
+        <attr name="npv_MaxValue" format="reference|integer" />
+        <attr name="npv_WrapSelectorWheel" format="reference|boolean" />
+        <attr name="npv_RespondChangeOnDetached" format="reference|boolean" />
+        <attr name="npv_HintText" format="reference|string" />
+        <attr name="npv_EmptyItemHint" format="reference|string" />
+        <attr name="npv_MarginStartOfHint" format="reference|dimension" />
+        <attr name="npv_MarginEndOfHint" format="reference|dimension" />
+        <attr name="npv_ItemPaddingHorizontal" format="reference|dimension" />
+        <attr name="npv_ItemPaddingVertical" format="reference|dimension" />
+        <attr name="npv_RespondChangeInMainThread" format="reference|boolean" />
+        <attr name="npv_TextEllipsize" format="reference|string" />
+
+        <!--just used to measure maxWidth for wrap_content without hint,
+            the string array will never be displayed.
+            you can set this attr if you want to keep the wraped numberpickerview
+            width unchanged when alter the content list-->
+        <attr name="npv_AlternativeTextArrayWithMeasureHint" format="reference" />
+        <attr name="npv_AlternativeTextArrayWithoutMeasureHint" format="reference" />
+        <!--the max length of hint content-->
+        <attr name="npv_AlternativeHint" format="reference|string" />
+    </declare-styleable>
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="CustomIndicatorView">
+        <!-- 指示器宽度-->
+        <attr name="u_indicatorWidth" format="dimension"/>
+        <!-- 指示器高度-->
+        <attr name="u_indicatorHeight" format="dimension"/>
+        <!-- 指示器间隔-->
+        <attr name="u_indicatorSpace" format="dimension"/>
+        <!-- 指示器间默认图片-->
+        <attr name="u_indicatorDrawableNormal" format="reference"/>
+        <!-- 指示器间选中图片-->
+        <attr name="u_indicatorDrawableSelected" format="reference"/>
+    </declare-styleable>
+</resources>

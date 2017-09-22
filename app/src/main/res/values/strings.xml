@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">SmartChart</string>
+
+    <string name="app_exit">再按一次退出应用</string>
+    <!-- 网络访问错误 -->
+    <string name="net_error">网络访问错误，请稍后再试</string>
+
+    <!--访问数据出错-->
+    <string name="data_error">请求数据失败，请稍后再试!</string>
+
+    <string name="filter_vcode">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-!@#$%^*</string>
+    <string name="code_txt">(%1$ss)后重发</string>
+    <string name="bind_mobile_get_code">获取验证码</string>
+    <string name="group">分组一、分组二、分组三、分组四\n分组五、分组六</string>
+
+</resources>

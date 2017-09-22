@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <!-- 透明色值-->
+    <color name="transparent">#00000000</color>
+    <!-- 白色-->
+    <color name="white">#ffffff</color>
+    <!-- 黑色（一级标题色值）-->
+    <color name="black">#000000</color>
+    <!-- 红色-->
+
+    <!-- 用于普通级段落信息、引导词、正文标题-->
+    <color name="uthing_color_333333">#333333</color>
+
+    <!-- 用于正文文字-->
+    <color name="uthing_color_666666">#666666</color>
+
+    <!-- 用于辅助、次要的文字信息-->
+    <color name="uthing_color_999999">#999999</color>
+
+    <!-- 用于分割线、分割区域描边-->
+    <color name="uthing_color_e0e0e0">#e0e0e0</color>
+
+    <!-- 用于内容区域的底色-->
+    <color name="uthing_color_f2f2f2">#f2f2f2</color>
+
+    <color name="color_1e1e1e">#1e1e1e</color>
+    <color name="color_353535">#353535</color>
+    <color name="color_E75B5B">#E75B5B</color>
+    <color name="color_FF3636">#FF3636</color>
+    <color name="color_FD8B52">#FD8B52</color>
+    <color name="color_2CA2F4">#2CA2F4</color>
+    <color name="color_969696">#969696</color>
+    <color name="color_d2d2d2">#d2d2d2</color>
+    <color name="color_f6f6f6">#f6f6f6</color>
+    <color name="color_dcdcdc">#dcdcdc</color>
+    <color name="color_F0F1F9">#F0F1F9</color>
+    <color name="color_595959">#595959</color>
+    <color name="text_enabled">#f00</color>
+    <color name="text_disabled">#000</color>
+    <color name="color_323232">#323232</color>
+    <color name="color_FE5E63">#FE5E63</color>
+    <color name="color_6CABFA">#6CABFA</color>
+    <color name="color_FBE382">#FBE382</color>
+    <color name="color_FDA33E">#FDA33E</color>
+    <color name="color_646464">#646464</color>
+    <color name="color_3c3c3c">#3c3c3c</color>
+    <color name="color_e6e6e6">#e6e6e6</color>
+    <color name="color_67DCFF">#67DCFF</color>
+    <color name="color_ffa42f">#ffa42f</color>
+
+</resources>

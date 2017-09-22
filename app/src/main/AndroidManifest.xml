@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.smart.smartchart">
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <!-- Required -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:name="com.smart.smartchart.Application"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppDefaultTheme"
+        tools:replace="icon,theme,label">
+        <!--注册广播-->
+        <activity
+            android:name="com.smart.smartchart.ui.activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.smart.smartchart.ui.activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppMainTheme" />
+        <activity android:name="com.smart.smartchart.ui.activity.CommWebActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.smart.smartchart.ui.activity.home.MessageActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.smart.smartchart.ui.activity.data.DataDetailsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.smart.smartchart.ui.activity.data.DataTrendActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.smart.smartchart.ui.activity.form.FormDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppMainTheme"/>
+        <activity android:name="com.smart.smartchart.ui.activity.SetDataActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.smart.smartchart.ui.activity.energy.BranchEnergyActivity"
+            android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>

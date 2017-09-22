@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f6f6f6">
+<include layout="@layout/base_layout_toolbar"/>
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="18dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/tv_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="41dp"
+                    android:gravity="center_vertical"
+                    android:text="一次供温（℃）"
+                    android:textColor="@color/color_323232"
+                    android:textSize="16sp" />
+
+                <com.smart.smartchart.widget.hellocharts.view.LineChartView
+                    android:id="@+id/lineView"
+                    android:layout_width="match_parent"
+                    android:layout_height="234dp" />
+            </LinearLayout>
+            <com.smart.smartchart.widget.hellocharts.view.ColumnChartView
+                android:id="@+id/chart"
+                android:layout_width="match_parent"
+                android:layout_height="253dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:background="@color/white"
+                android:layout_marginTop="10dp"
+                android:paddingBottom="18dp"
+                android:paddingTop="18dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

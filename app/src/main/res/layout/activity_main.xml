@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <FrameLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <View style="@style/divider_line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_tab_height"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <include
+            android:id="@+id/main_tab1"
+            layout="@layout/item_main_tab"/>
+
+        <include
+            android:id="@+id/main_tab2"
+            layout="@layout/item_main_tab"/>
+        <include
+            android:id="@+id/main_tab3"
+            layout="@layout/item_main_tab"/>
+        <include
+            android:id="@+id/main_tab4"
+            layout="@layout/item_main_tab"/>
+        <include
+            android:id="@+id/main_tab5"
+            layout="@layout/item_main_tab"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<TextView
+    android:id="@+id/tv_time"
+    android:layout_width="match_parent"
+    android:layout_height="41dp"
+    android:gravity="center"
+    android:text="07/30 12:30"
+    android:textColor="@color/uthing_color_999999"
+    android:textSize="12sp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/shape_corner_white_little"
+        android:paddingTop="21dp"
+        android:paddingBottom="21dp"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp">
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="您参与了行程已结束"
+        android:textColor="@color/uthing_color_333333"
+        android:textSize="15sp"
+        android:lineSpacingExtra="8dp"/>
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="行程：这里显示行程标题"
+            android:textColor="@color/uthing_color_333333"
+            android:textSize="15sp"
+            android:lineSpacingExtra="8dp"
+            android:layout_marginTop="11dp"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/tv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击查看"
+            android:layout_marginTop="11dp"
+            android:layout_gravity="right"
+            android:textSize="14sp"
+            android:textColor="#198CE5"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+</LinearLayout>

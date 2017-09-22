@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f6f6f6">
+    <include layout="@layout/base_layout_toolbar"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_start_time"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableRight="@drawable/icon_arrow"
+            android:gravity="center_vertical"
+            android:hint="开始时间"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:textColor="@color/color_646464"
+            android:textColorHint="@color/color_969696"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:background="#e6e6e6" />
+
+        <TextView
+            android:id="@+id/tv_end_time"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableRight="@drawable/icon_arrow"
+            android:gravity="center_vertical"
+            android:hint="结束时间"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:textColor="@color/color_646464"
+            android:textColorHint="@color/color_969696"
+            android:textSize="15sp" />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:background="#e6e6e6" />
+
+        <TextView
+            android:id="@+id/tv_energy_type"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableRight="@drawable/icon_arrow"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="热耗"
+            android:singleLine="true"
+            android:textColor="@color/color_646464"
+            android:textColorHint="@color/color_969696"
+            android:textSize="15sp" />
+    </LinearLayout>
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="16dp"
+                android:paddingTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="热量消耗（GJ）"
+                    android:textSize="16sp"
+                    android:textColor="@color/color_323232"/>
+                <com.smart.smartchart.widget.hellocharts.view.ColumnChartView
+                    android:id="@+id/chart_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="210dp"
+                    android:background="@color/white"
+                    android:layout_marginTop="15dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="16dp"
+                android:paddingTop="10dp"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="万平方米热耗（GJ/Wm）"
+                    android:textSize="16sp"
+                    android:textColor="@color/color_323232"/>
+                <com.smart.smartchart.widget.hellocharts.view.ColumnChartView
+                    android:id="@+id/chart_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="210dp"
+                    android:background="@color/white"
+                    android:layout_marginTop="15dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

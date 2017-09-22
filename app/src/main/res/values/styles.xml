@@ -1,0 +1,105 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorAccent">@color/color_E75B5B</item>
+
+    </style>
+    <!-- 启动页的Theme-->
+    <style name="AppSplashTheme" parent="AppBaseTheme">
+        <item name="android:windowBackground">@drawable/w_splash</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="AppDefaultTheme" parent="AppBaseTheme">
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="AppMainTheme" parent="AppBaseTheme">
+        <item name="android:windowIsTranslucent">false</item>
+    </style>
+
+
+    <style name="divider_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/divider_line_height</item>
+        <item name="android:background">@color/uthing_color_e0e0e0</item>
+    </style>
+    <style name="divider_space">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">12dp</item>
+        <item name="android:background">@color/color_F0F1F9</item>
+    </style>
+
+    <style name="DefaultDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+
+    <!-- 确定按钮通用样式-->
+    <style name="DefaultButtonStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/column_height</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/default_btn_bg</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="ActionSheetAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/push_down_in</item>
+        <item name="android:windowExitAnimation">@anim/push_up_out</item>
+    </style>
+
+    <style name="ActionSheet" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowAnimationStyle">@style/ActionSheetAnimation</item>
+    </style>
+
+    <style name="TabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/font_size_15</item>
+        <item name="android:textColor">@color/uthing_color_333333</item>
+    </style>
+
+
+    <style name="DefaultTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">15sp</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <style name="HomeTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/font_size_16</item>
+        <item name="android:textColor">@color/uthing_color_333333</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+
+    <style name="SwipeBackLayout">
+        <item name="edge_size">50dip</item>
+        <item name="shadow_left">@drawable/shadow_left</item>
+        <item name="shadow_right">@drawable/shadow_right</item>
+        <item name="shadow_bottom">@drawable/shadow_bottom</item>
+    </style>
+    <style name="WaveStyle">
+        <item name="android:background">@color/transparent</item>
+    </style>
+
+</resources>

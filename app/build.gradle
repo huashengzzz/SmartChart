@@ -1,0 +1,100 @@
+apply plugin: 'com.android.application'
+//产品名
+def PRODUCT_NAME = "smartchart"
+//打包时间
+static def buildTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
+    defaultConfig {
+        applicationId "com.smart.smartchart"
+        minSdkVersion 14
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0.0"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    compileOptions {
+        encoding "UTF-8"
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+
+    buildTypes {
+        debug {
+            buildConfigField "String", "BASE_URL", "\"http://wewewew\""
+            //signingConfig signingConfigs.release
+        }
+
+//        release {
+//            buildConfigField "String", "BASE_URL", "\"http://wewew\""
+//            //移除无用res文件
+//            shrinkResources true
+//            //混淆
+//            minifyEnabled true
+//            useProguard true
+//            zipAlignEnabled true
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.release
+//            //    release包的命名格式为：产品名_版本号_渠道名_打包时间_online.apk
+////    debug包的命名格式为：产品名_版本号_渠道名_打包时间_dev.apk
+//            applicationVariants.all { variant ->
+//                variant.outputs.each { output ->
+//                    def outputFile = output.outputFile
+//
+//                    if (null != outputFile && outputFile.name.endsWith('.apk')) {
+//                        File outputDir = new File(outputFile.parent);
+//                        def baseName = PRODUCT_NAME + "_" + "${defaultConfig.versionName}"
+//                        if (buildType.name == 'release') {
+//                            baseName = baseName + "_online.apk"
+//                        } else if (buildType.name == 'debug') {
+//                            baseName = baseName + "_dev.apk"
+//                        }else if (buildType.name == 'preview') {
+//                            baseName = baseName + "_pre.apk"
+//                        }
+//                        output.outputFile = new File(outputDir, baseName)
+//                    }
+//                }
+//            }
+//
+//        }
+
+    }
+
+
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    compile project(':Ultra-Pull-To-Refresh')
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.squareup.okhttp3:okhttp:3.6.0'
+    compile 'com.bigkoo:convenientbanner:2.0.5'
+    compile 'com.jakewharton:butterknife:8.5.1'
+    compile 'com.orhanobut:logger:2.1.1'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
+    compile 'com.github.hackware1993:MagicIndicator:1.5.0'
+}
