@@ -9,17 +9,17 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
+import com.scwang.smartrefresh.layout.SmartRefreshLayout;
+import com.scwang.smartrefresh.layout.api.RefreshLayout;
+import com.scwang.smartrefresh.layout.listener.OnRefreshLoadmoreListener;
 import com.smart.smartchart.R;
-import com.smart.smartchart.ui.activity.data.DataDetailsActivity;
+import com.smart.smartchart.ui.activity.data.DataTrendActivity;
 import com.smart.smartchart.ui.adapter.rv.CommonAdapter;
 import com.smart.smartchart.ui.adapter.rv.MultiItemTypeAdapter;
 import com.smart.smartchart.ui.adapter.rv.base.ViewHolder;
 import com.smart.smartchart.ui.base.BaseFragment;
 import com.smart.smartchart.ui.dialog.CommSigleSelectDialog;
 import com.smart.smartchart.ui.dialog.SelectDateDialog;
-import com.scwang.smartrefresh.layout.SmartRefreshLayout;
-import com.scwang.smartrefresh.layout.api.RefreshLayout;
-import com.scwang.smartrefresh.layout.listener.OnRefreshLoadmoreListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -96,7 +96,7 @@ public class DataMainFragment extends BaseFragment {
         adapter.setOnItemClickListener(new MultiItemTypeAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, RecyclerView.ViewHolder holder, int position) {
-                startActivity(new Intent(getActivity(), DataDetailsActivity.class));
+                startActivity(new Intent(getActivity(), DataTrendActivity.class));
             }
 
             @Override

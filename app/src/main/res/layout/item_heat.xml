@@ -7,7 +7,7 @@
     android:id="@+id/tv_heat_group"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="热换机组一"
+    android:text="数据一"
     android:textColor="@color/color_323232"
     android:textSize="17sp"
     android:layout_marginTop="20dp"
@@ -66,7 +66,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="循环磊状态：运行"
+            android:text="二次温差：3.4℃"
             android:textSize="15sp"
             android:textColor="@color/color_969696"/>
     </LinearLayout>

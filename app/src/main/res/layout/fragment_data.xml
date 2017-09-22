@@ -14,7 +14,7 @@
             android:id="@+id/tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="当前用户：李三"
+            android:text="标题"
             android:layout_centerInParent="true"
             android:textColor="@color/color_323232"
             android:textSize="18sp"
@@ -27,7 +27,8 @@
             android:src="@drawable/icon_empty_message"
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="12dp" />
+            android:layout_marginRight="12dp"
+            android:visibility="gone"/>
     </RelativeLayout>
     <View style="@style/divider_line"/>
     <com.smart.smartchart.widget.smarttablelayout.SmartTabLayout

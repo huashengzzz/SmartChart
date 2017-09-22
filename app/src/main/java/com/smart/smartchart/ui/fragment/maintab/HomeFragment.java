@@ -1,24 +1,12 @@
 package com.smart.smartchart.ui.fragment.maintab;
 
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.view.ViewPager;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.ScrollView;
-import android.widget.TextView;
 
-import com.bigkoo.convenientbanner.ConvenientBanner;
-import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
-import com.bigkoo.convenientbanner.holder.Holder;
 import com.smart.smartchart.R;
-import com.smart.smartchart.ui.activity.data.DataTrendActivity;
-import com.smart.smartchart.ui.activity.home.MessageActivity;
 import com.smart.smartchart.ui.base.BaseFragment;
 import com.smart.smartchart.utils.CommonUtils;
-import com.smart.smartchart.widget.BannerTextView;
-import com.smart.smartchart.widget.CustomIndicatorView;
 import com.smart.smartchart.widget.hellocharts.gesture.ContainerScrollType;
 import com.smart.smartchart.widget.hellocharts.model.Axis;
 import com.smart.smartchart.widget.hellocharts.model.AxisValue;
@@ -34,11 +22,9 @@ import com.smart.smartchart.widget.hellocharts.view.ColumnChartView;
 import com.smart.smartchart.widget.hellocharts.view.LineChartView;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.OnClick;
 
 import static com.smart.smartchart.R.id.chart;
 
@@ -47,25 +33,14 @@ import static com.smart.smartchart.R.id.chart;
  * Created by Gs on 2017/4/12.
  */
 
-public class HomeFragment extends BaseFragment implements BannerTextView.OnItemClick, ViewPager.OnPageChangeListener {
+public class HomeFragment extends BaseFragment  {
 
     @BindView(chart)
     ColumnChartView columnChartView;
     @BindView(R.id.lineView)
     LineChartView lineChartView;
-    @BindView(R.id.banner)
-    BannerTextView bannerTextView;
-    @BindView(R.id.tv_name)
-    TextView tvName;
-    @BindView(R.id.img_message)
-    ImageView imgMessage;
-    @BindView(R.id.banner_top)
-    ConvenientBanner banner;
-    @BindView(R.id.ic_preference)
-    CustomIndicatorView ic_preference;
     @BindView(R.id.scroll_view)
     ScrollView scrollView;
-    private List<List<String>> banners = new ArrayList<>();
 
     @Override
     protected int getContentViewID() {
@@ -77,35 +52,7 @@ public class HomeFragment extends BaseFragment implements BannerTextView.OnItemC
         CommonUtils.solveScrollConflict(lineChartView,scrollView);
         drawChart();
         drawLine();
-        if (bannerTextView == null) {
-            bannerTextView = (BannerTextView) rootView.findViewById(R.id.banner);
-        }
-        ArrayList ad = new ArrayList();
-        ad.add("公告来了，活动来了");
-        ad.add("什么来了，呵呵呵呵哈");
-        bannerTextView.addItem(ad);
-        bannerTextView.setOrientationVertical(true);
-        bannerTextView.setIntervalTime(5000);
-        bannerTextView.setOnItemClick(HomeFragment.this);
-        bannerTextView.play();
-        String[] str = {"一次供水：103bar", "一次供水：103bar", "一次供水：103bar", "一次供水：103bar", "一次供水：103bar", "一次供水：103bar"};
-        for (int i = 0; i < 6; i++) {
-            banners.add(Arrays.asList(str));
-        }
-        setUpView(banners);
-        banner.startTurning(5000);
-
     }
-
-    @OnClick({R.id.img_message})
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.img_message:
-                startActivity(new Intent(getActivity(), MessageActivity.class));
-                break;
-        }
-    }
-
 
     private void drawLine() {
         String[] lineLabels = {"09-12", "09-11", "09-10", "09-09", "09-08", "09-07", "09-06", "09-09", "09-08", "09-07", "09-06"};
@@ -239,86 +186,7 @@ public class HomeFragment extends BaseFragment implements BannerTextView.OnItemC
         columnChartView.setCurrentViewport(v);
     }
 
-    private void setUpView(List<List<String>> adEntities) {
-        if (adEntities != null || adEntities.size() > 0) {
-            banner.setPages(new CBViewHolderCreator<NetHolderView>() {
-                @Override
-                public NetHolderView createHolder() {
-                    return new NetHolderView();
-                }
-            }, adEntities)
-                    .setOnPageChangeListener(this);
 
-            if (adEntities.size() == 1) {
-                banner.setCanLoop(false);
-                ic_preference.setVisibility(View.INVISIBLE);
-            } else {
-                ic_preference.setVisibility(View.VISIBLE);
-            }
-
-            ic_preference.setIndicatorNum(adEntities.size());
-            ic_preference.setIndicatorSelected(0);
-        }
-    }
-
-    public class NetHolderView implements Holder<List<String>> {
-        private TextView[] views=new TextView[6];
-
-        @Override
-        public View createView(Context context) {
-            //你可以通过layout文件来创建，也可以像我一样用代码创建，不一定是Image，任何控件都可以进行翻页
-            View view = View.inflate(getContext(), R.layout.item_main_banner, null);
-            views[0] = (TextView) view.findViewById(R.id.tv_one);
-            views[1] = (TextView) view.findViewById(R.id.tv_two);
-            views[2] = (TextView) view.findViewById(R.id.tv_three);
-            views[3] = (TextView) view.findViewById(R.id.tv_four);
-            views[4] = (TextView) view.findViewById(R.id.tv_five);
-            views[5] = (TextView) view.findViewById(R.id.tv_six);
-
-            return view;
-        }
-
-        @Override
-        public void UpdateUI(Context context, int position, final List<String> data) {
-            for (int i = 0; i < views.length; i++) {
-                views[i].setText(data.get(i) == null ? "" : data.get(i));
-            }
-
-        }
-    }
-
-    @Override
-    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-    }
-
-    @Override
-    public void onPageSelected(int position) {
-        ic_preference.setIndicatorSelected(position);
-    }
-
-    @Override
-    public void onPageScrollStateChanged(int state) {
-
-    }
-
-
-    @Override
-    public void onClick(View view, int position, String text, Object extraData) {
-        //CommWebActivity.launchCommWebActivity(getActivity(),"活动","www.baidu.com");
-        startActivity(new Intent(getActivity(), DataTrendActivity.class));
-    }
-
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        if (bannerTextView != null) {
-            bannerTextView.stopAnim();
-        }
-        if (banner != null)
-            banner.stopTurning();
-    }
 
 
 }

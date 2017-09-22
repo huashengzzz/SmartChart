@@ -7,30 +7,6 @@
     <View android:layout_width="match_parent"
         android:layout_height="@dimen/padding_top"
         android:background="@color/black"/>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/white">
-        <TextView
-            android:id="@+id/tv_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="当前用户：李三"
-            android:layout_centerInParent="true"
-            android:textColor="@color/color_323232"
-            android:textSize="18sp"
-            android:layout_marginRight="100dp"
-            android:singleLine="true"/>
-        <ImageView
-            android:id="@+id/img_message"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/icon_empty_message"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="12dp" />
-    </RelativeLayout>
-    <View style="@style/divider_line"/>
 <ScrollView
     android:id="@+id/scroll_view"
     android:layout_width="match_parent"
@@ -42,75 +18,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:background="@color/white" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="46dp"
-            android:background="@color/white"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="@dimen/page_margin"
-                android:src="@drawable/icon_notice" />
-
-            <com.smart.smartchart.widget.BannerTextView
-                android:id="@+id/banner"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:ellipsize="end"
-                android:gravity="center_vertical"
-                android:maxLines="1"
-                android:paddingLeft="5dp"
-                android:paddingRight="10dp"
-                android:textColor="@color/color_595959"
-                android:textSize="15sp" />
-
-        </LinearLayout>
-        <FrameLayout
-            android:id="@+id/frame_banner"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:paddingBottom="15dp">
-
-            <com.bigkoo.convenientbanner.ConvenientBanner
-                android:id="@+id/banner_top"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="135dp"
-                app:canLoop="true"
-                android:layout_marginTop="45dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"/>
-
-            <com.smart.smartchart.widget.CustomIndicatorView
-                xmlns:uic="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/ic_preference"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom|center_horizontal"
-                android:layout_marginBottom="7dp"
-                uic:u_indicatorDrawableNormal="@drawable/ic_page_indicator"
-                uic:u_indicatorDrawableSelected="@drawable/ic_page_indicator_focused"
-                uic:u_indicatorHeight="6dp"
-                uic:u_indicatorSpace="10dp"
-                uic:u_indicatorWidth="6dp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="热源系数"
-                android:textSize="16sp"
-                android:textColor="@color/color_323232"
-                android:layout_marginTop="13dp"
-                android:layout_marginLeft="10dp"/>
-        </FrameLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -124,7 +31,7 @@
                 android:layout_height="41dp"
                 android:layout_marginLeft="11dp"
                 android:gravity="center_vertical"
-                android:text="昨日集团能耗"
+                android:text="表格"
                 android:textColor="@color/color_323232"
                 android:textSize="16sp" />
 
@@ -150,7 +57,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="41dp"
                 android:gravity="center_vertical"
-                android:text="近七日集团能耗趋势"
+                android:text="列表"
                 android:textColor="@color/color_323232"
                 android:textSize="16sp" />
 

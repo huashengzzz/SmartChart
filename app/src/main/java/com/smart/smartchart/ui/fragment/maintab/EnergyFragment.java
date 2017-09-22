@@ -1,12 +1,10 @@
 package com.smart.smartchart.ui.fragment.maintab;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
 import com.smart.smartchart.R;
-import com.smart.smartchart.ui.activity.energy.BranchEnergyActivity;
 import com.smart.smartchart.ui.base.BaseFragment;
 import com.smart.smartchart.ui.dialog.CommSigleSelectDialog;
 import com.smart.smartchart.ui.dialog.SelectDateDialog;
@@ -81,7 +79,6 @@ public class EnergyFragment extends BaseFragment {
             @Override
             public void onSelect(String str,int value) {
                 tv.setText(str);
-                startActivity(new Intent(getActivity(), BranchEnergyActivity.class));
             }
         });
         commSigleSelectDialog.show();
