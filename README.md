@@ -27,33 +27,13 @@
   
 冲突代码：
 ```java
- public static void solveScrollConflict(View view, final ScrollView scrollView) {
-        view.setOnTouchListener(new View.OnTouchListener() {
-            float ratio = 1.2f; //水平和竖直方向滑动的灵敏度,偏大是水平方向灵敏
-            float x0 = 0f;
-            float y0 = 0f;
-
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                switch (event.getAction()) {
-                    case MotionEvent.ACTION_DOWN:
-                        x0 = event.getX();
-                        y0 = event.getY();
-                        break;
-                    case MotionEvent.ACTION_MOVE:
-                        float dx = Math.abs(event.getX() - x0);
-                        float dy = Math.abs(event.getY() - y0);
-                        x0 = event.getX();
-                        y0 = event.getY();
-                        scrollView.requestDisallowInterceptTouchEvent(dx * ratio > dy);
-                        break;
-                }
-                return false;
-            }
-        });
-    }
-    ```
-
+final RefreshLayout refreshLayout = (RefreshLayout) findViewById(R.id.refreshLayout);
+//设置 Header 为 Material风格
+refreshLayout.setRefreshHeader(new MaterialHeader(this).setShowBezierWave(true));
+//设置 Footer 为 球脉冲
+refreshLayout.setRefreshFooter(new BallPulseFooter(this).setSpinnerStyle(SpinnerStyle.Scale));
+```
+  
 ## 二维表格
 
 ### 使用说明：
@@ -163,7 +143,7 @@
 	 * 返回下拉刷新控件
 	 */
     public SwipeRefreshLayout getSwipeRefreshLayout();
-```
+    ```
 ## 感谢
 [hellocharts-android](https://github.com/lecho/hellocharts-android) 
 
