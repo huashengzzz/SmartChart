@@ -27,12 +27,30 @@
   
 冲突代码：
 ```java
-final RefreshLayout refreshLayout = (RefreshLayout) findViewById(R.id.refreshLayout);
-//设置 Header 为 Material风格
-refreshLayout.setRefreshHeader(new MaterialHeader(this).setShowBezierWave(true));
-//设置 Footer 为 球脉冲
-refreshLayout.setRefreshFooter(new BallPulseFooter(this).setSpinnerStyle(SpinnerStyle.Scale));
-```
+ view.setOnTouchListener(new View.OnTouchListener() {
+            float ratio = 1.2f; //水平和竖直方向滑动的灵敏度,偏大是水平方向灵敏
+            float x0 = 0f;
+            float y0 = 0f;
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        x0 = event.getX();
+                        y0 = event.getY();
+                        break;
+                    case MotionEvent.ACTION_MOVE:
+                        float dx = Math.abs(event.getX() - x0);
+                        float dy = Math.abs(event.getY() - y0);
+                        x0 = event.getX();
+                        y0 = event.getY();
+                        scrollView.requestDisallowInterceptTouchEvent(dx * ratio > dy);
+                        break;
+                }
+                return false;
+            }
+        });
+ ```
   
 ## 二维表格
 
@@ -45,7 +63,7 @@ refreshLayout.setRefreshFooter(new BallPulseFooter(this).setSpinnerStyle(Spinner
 ### APIs：
 
 ```java
-    /**
+  /**
      * 设置表的标题
      */
     public void setTitle(String title);
@@ -110,7 +128,6 @@ refreshLayout.setRefreshFooter(new BallPulseFooter(this).setSpinnerStyle(Spinner
     /**
      * 设置content的初始position
      * 比如你想进入这个Activity的时候让第300条数据显示在屏幕上（前提是该数据存在）
-     * 那么在这里传入299即可
      */
     public void setInitPosition(int initPosition);
 
@@ -143,7 +160,9 @@ refreshLayout.setRefreshFooter(new BallPulseFooter(this).setSpinnerStyle(Spinner
 	 * 返回下拉刷新控件
 	 */
     public SwipeRefreshLayout getSwipeRefreshLayout();
-    ```
+ ```
+ 
+ 
 ## 感谢
 [hellocharts-android](https://github.com/lecho/hellocharts-android) 
 
