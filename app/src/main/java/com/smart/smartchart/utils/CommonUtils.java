@@ -807,12 +807,14 @@ public class CommonUtils {
         }
 
     }
+
     //解决水平滑动布局和scrollview的滑动冲突
-    public static void solveScrollConflict(View view , final ScrollView scrollView){
+    public static void solveScrollConflict(View view, final ScrollView scrollView) {
         view.setOnTouchListener(new View.OnTouchListener() {
             float ratio = 1.2f; //水平和竖直方向滑动的灵敏度,偏大是水平方向灵敏
             float x0 = 0f;
             float y0 = 0f;
+
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
