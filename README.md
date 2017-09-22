@@ -7,19 +7,23 @@
 
 这里主要介绍近期项目所需的表格和折线以及二维表格，有需求的同学可以不妨借鉴 😆。
 
+### 示例
+
+![](https://github.com/huashengzzz/SmartChart/blob/master/images/one.gif)  ![](https://github.com/huashengzzz/SmartChart/blob/master/images/two.gif)
+
+二维表格
+
+![](https://github.com/huashengzzz/SmartChart/blob/master/images/three.gif)
+
 ## 折线图和柱状图
 
 项目中的柱状图和折线图集成的是[hellocharts-android](https://github.com/lecho/hellocharts-android)的核心代码，在此基础上增加一些修改。
 
-### 示例
-
-![](https://github.com/huashengzzz/SmartChart/blob/master/images/one.gif)   ![](https://github.com/huashengzzz/SmartChart/blob/master/images/two.gif)
-
 ### 增加特性说明：
 
-  -X轴Y轴的标题样式和旋转角度
-  -增加label的设置方法
-  -解决scrollview的滑动冲突
+  - X轴Y轴的标题样式和旋转角度
+  - 增加label的设置方法
+  - 解决scrollview的滑动冲突
   
 冲突代码：
 ```java
@@ -51,9 +55,6 @@
     ```
 
 ## 二维表格
-
-### 示例
-![](https://github.com/huashengzzz/SmartChart/blob/master/images/three.gif)
 
 ### 使用说明：
   
