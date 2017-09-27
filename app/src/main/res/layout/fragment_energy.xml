@@ -1,85 +1,294 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <View android:layout_width="match_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_weather_detail"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
         android:layout_height="@dimen/padding_top"
-        android:background="@color/black"/>
+        android:background="#28001d40" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/white">
-        <TextView
-            android:id="@+id/tv_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="标题"
-            android:layout_centerInParent="true"
-            android:textColor="@color/color_323232"
-            android:textSize="18sp"
-            android:layout_marginRight="100dp"
-            android:singleLine="true"/>
-        <ImageView
-            android:id="@+id/img_message"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/icon_empty_message"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="12dp"
-            android:visibility="gone"/>
-    </RelativeLayout>
-    <View style="@style/divider_line"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:orientation="horizontal"
-        android:background="@color/white">
-        <TextView
-            android:id="@+id/tv_time"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:gravity="center_vertical"
-            android:text=""
-            android:layout_weight="1"
-            android:paddingLeft="10dp"
-            android:textSize="15sp"
-            android:textColor="@color/color_646464"
-            android:singleLine="true"
-            android:drawableRight="@drawable/icon_arrow" />
-        <View android:layout_height="25dp"
-            android:layout_width="1dp"
-            android:background="#e6e6e6"
-            android:layout_gravity="center_vertical"/>
-        <TextView
-            android:id="@+id/tv_heat_consume"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:gravity="center_vertical"
-            android:text="热耗"
-            android:layout_weight="1"
-            android:paddingLeft="10dp"
-            android:textSize="15sp"
-            android:textColor="@color/color_646464"
-            android:drawableRight="@drawable/icon_arrow"
-            android:singleLine="true"/>
-        <View android:layout_height="25dp"
-            android:layout_width="1dp"
-            android:background="#e6e6e6"
-            android:layout_gravity="center_vertical"/>
-        <TextView
-            android:id="@+id/tv_sort"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:gravity="center_vertical"
-            android:text="默认排序"
-            android:layout_weight="1"
-            android:paddingLeft="10dp"
-            android:textSize="15sp"
-            android:textColor="@color/color_646464"
-            android:drawableRight="@drawable/icon_arrow"
-            android:singleLine="true"/>
-    </LinearLayout>
-    <View style="@style/divider_line"/>
+        android:background="#28001d40">
 
+        <TextView
+            android:id="@+id/tv_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="北京市"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_change_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="11dp"
+            android:text="切换城市"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#28001d40"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/tv_temp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:padding="0dp"
+                        android:text="28"
+                        android:textColor="@color/white"
+                        android:textSize="77sp" />
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/tv_temp"
+                        android:background="@drawable/shape_temp_circle" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@id/view"
+                        android:paddingLeft="6dp"
+                        android:text="实时"
+                        android:textColor="@color/white"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/tv_weather"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_temp"
+                        android:layout_marginLeft="10dp"
+                        android:singleLine="true"
+                        android:text="南风转北风 3级"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal"
+                        android:paddingBottom="35dp">
+
+                        <ImageView
+                            android:id="@+id/img_weather"
+                            android:layout_width="66dp"
+                            android:layout_height="47dp"
+                            android:background="@drawable/icon_cloudy" />
+
+                        <TextView
+                            android:id="@+id/tv_weather_detail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="5dp"
+                            android:text="大雨转晴"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_marginTop="9dp"
+                    android:background="#28ffffff"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_tomorrow_weather"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_next_day"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="9dp"
+                            android:layout_marginTop="13dp"
+                            android:text="明天"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_next_temp_range"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="13dp"
+                            android:text="20/29℃"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_next_weather"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_next_day"
+                            android:layout_marginLeft="9dp"
+                            android:layout_marginTop="10dp"
+                            android:text="多云转晴"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/tv_next_weather_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@id/tv_next_day"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="9dp"
+                            android:src="@drawable/icon_cloudy" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0.3dp"
+                        android:layout_height="match_parent"
+                        android:background="#28ffffff" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_last_weather"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_last_day"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="9dp"
+                            android:layout_marginTop="13dp"
+                            android:text="后天"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_last_temp_range"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="13dp"
+                            android:text="20/29℃"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_last_weather"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_last_day"
+                            android:layout_marginLeft="9dp"
+                            android:layout_marginTop="10dp"
+                            android:text="多云转晴"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/tv_last_weather_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@id/tv_last_day"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="9dp"
+                            android:src="@drawable/icon_cloudy" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#28001d40"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="24小时预报"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:paddingTop="11dp"
+                    android:paddingLeft="10dp"
+                    android:paddingBottom="5dp"/>
+                <com.smart.smartchart.widget.hellocharts.view.LineChartView
+                    android:id="@+id/lineView"
+                    android:layout_width="match_parent"
+                    android:layout_height="202dp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:background="#28001d40">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="7天预报"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:paddingTop="11dp"
+                    android:paddingLeft="10dp"
+                    android:paddingBottom="10dp"/>
+                <View android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="#28ffffff"/>
+
+                <com.smart.smartchart.widget.weatherview.WeatherView
+                    android:id="@+id/weather_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="370dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

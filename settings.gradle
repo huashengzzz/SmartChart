@@ -1,2 +1,1 @@
-include ':app', ':Ultra-Pull-To-Refresh'
-project(':Ultra-Pull-To-Refresh').projectDir = new File('ThirdPart/Ultra-Pull-To-Refresh')
+include ':app'

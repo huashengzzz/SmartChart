@@ -27,15 +27,6 @@ import com.smart.smartchart.utils.CommonUtils;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * <pre>
- *     author : zyb
- *     e-mail : hbdxzyb@hotmail.com
- *     time   : 2017/05/23
- *     desc   : 总的adapterController
- *     version: 1.0
- * </pre>
- */
 
 public abstract class PanelListAdapter {
 

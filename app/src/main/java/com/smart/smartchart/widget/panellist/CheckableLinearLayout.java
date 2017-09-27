@@ -6,15 +6,6 @@ import android.util.AttributeSet;
 import android.widget.Checkable;
 import android.widget.LinearLayout;
 
-/**
- * <pre>
- *     author : zyb
- *     e-mail : hbdxzyb@hotmail.com
- *     time   : 2017/05/24
- *     desc   : a simple LinearLayout that can be checked
- *     version: 1.0
- * </pre>
- */
 
 public class CheckableLinearLayout extends LinearLayout implements Checkable {
 

@@ -5,15 +5,6 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.HorizontalScrollView;
 
-/**
- * <pre>
- *     author : zyb
- *     e-mail : hbdxzyb@hotmail.com
- *     time   : 2017/05/22
- *     desc   :
- *     version: 1.0
- * </pre>
- */
 
 public class MyHorizontalScrollView extends HorizontalScrollView{
 

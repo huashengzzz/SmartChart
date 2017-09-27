@@ -3,63 +3,24 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/color_f6f6f6">
-    <View android:layout_width="match_parent"
-        android:layout_height="@dimen/padding_top"
+    <View android:layout_height="@dimen/padding_top"
+        android:layout_width="match_parent"
         android:background="@color/black"/>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/white">
-        <TextView
-            android:id="@+id/tv_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="标题"
-            android:layout_centerInParent="true"
-            android:textColor="@color/color_323232"
-            android:textSize="18sp"
-            android:layout_marginRight="100dp"
-            android:singleLine="true"/>
-        <ImageView
-            android:id="@+id/img_message"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/icon_empty_message"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="12dp"
-            android:visibility="gone"/>
-    </RelativeLayout>
-    <com.smart.smartchart.widget.smarttablelayout.SmartTabLayout
+    <com.smart.smartchart.widget.panellist.PanelListLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/tab"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        app:stl_customTabTextLayoutId="@layout/custom_tab"
-        app:stl_customTabTextViewId="@+id/custom_text"
-        app:stl_indicatorAlwaysInCenter="false"
-        app:stl_indicatorWithoutPadding="true"
-        app:stl_indicatorInFront="true"
-        app:stl_indicatorInterpolation="smart"
-        app:stl_indicatorGravity="bottom"
-        app:stl_indicatorColor="@color/color_FDA33E"
-        app:stl_indicatorThickness="2dp"
-        app:stl_indicatorWidth="auto"
-        app:stl_indicatorCornerRadius="3dp"
-        app:stl_overlineColor="#4D000000"
-        app:stl_overlineThickness="0dp"
-        app:stl_underlineColor="#f00"
-        app:stl_underlineThickness="0dp"
-        app:stl_dividerColor="#4D000000"
-        app:stl_dividerThickness="0dp"
-        app:stl_defaultTabTextAllCaps="false"
-        app:stl_distributeEvenly="false"
-        app:stl_clickable="true"
-        app:stl_titleOffset="auto_center"
-        android:background="@color/white"/>
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewpager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:id="@+id/id_pl_root"
+        android:background="@color/white">
+
+        <ListView
+            android:id="@+id/id_lv_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fastScrollEnabled="false"
+            android:overScrollMode="never"
+            android:divider="@null"
+            android:dividerHeight="0dp"/>
+
+    </com.smart.smartchart.widget.panellist.PanelListLayout>
 </LinearLayout>

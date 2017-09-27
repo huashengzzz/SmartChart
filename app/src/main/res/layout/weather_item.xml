@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <View
+        android:id="@+id/line_two"
+        android:layout_width="0.2dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:background="#28ffffff" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tv_week"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="今天"
+                android:textColor="#fff"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="12/07"
+                android:textColor="#fff"
+                android:textSize="12sp"
+                android:layout_marginTop="6dp"/>
+
+            <TextView
+                android:id="@+id/tv_day_weather"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:gravity="center"
+                android:text="晴"
+                android:textColor="#fff"
+                android:textSize="15sp"
+                android:layout_marginTop="7dp"/>
+
+            <ImageView
+                android:id="@+id/iv_day_weather"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="15dp" />
+
+            <com.smart.smartchart.widget.weatherview.TemperatureView
+                android:id="@+id/ttv_day"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp" />
+
+            <ImageView
+                android:id="@+id/iv_night_weather"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/tv_night_weather"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="晴"
+                android:textColor="#fff"
+                android:textSize="15sp"
+                android:layout_marginTop="15dp"/>
+
+            <TextView
+                android:id="@+id/tv_wind_ori"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="西南风"
+                android:textColor="#fff"
+                android:textSize="12dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/tv_wind_level"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="3级"
+                android:textColor="#fff"
+                android:textSize="15sp"
+                android:layout_marginTop="7dp"/>
+        </LinearLayout>
+
+
+
+</FrameLayout>

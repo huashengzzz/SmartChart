@@ -6,13 +6,11 @@ import android.view.KeyEvent;
 
 import com.smart.smartchart.R;
 import com.smart.smartchart.ui.base.BaseActivity;
-import com.smart.smartchart.utils.SPManager;
 
 
 public class SplashActivity extends BaseActivity {
 
     private static final int sleepTime = 1500;
-    private String authCode;
 
     @Override
     protected int getContentViewId() {
@@ -21,7 +19,6 @@ public class SplashActivity extends BaseActivity {
 
     @Override
     protected void initViewsAndEvents(Bundle savedInstanceState) {
-        authCode = SPManager.getAuthCode(this);
     }
 
     @Override

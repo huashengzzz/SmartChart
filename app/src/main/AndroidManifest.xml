@@ -45,9 +45,6 @@
             android:screenOrientation="portrait"/>
         <activity android:name="com.smart.smartchart.ui.activity.data.DataTrendActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.smart.smartchart.ui.activity.form.FormDetailsActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppMainTheme"/>
         <activity android:name="com.smart.smartchart.ui.activity.SetDataActivity"
             android:screenOrientation="portrait"/>
         <activity android:name="com.smart.smartchart.ui.activity.energy.BranchEnergyActivity"

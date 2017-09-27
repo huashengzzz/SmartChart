@@ -21,16 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-/**
- * <pre>
- *     author : zyb
- *     e-mail : hbdxzyb@hotmail.com
- *     time   : 2017/05/23
- *     desc   : 整个页面的Adapter，内部使用了两个子Adapter
- *              开发者可自行定义两个子Adapter
- *     version: 1.0
- * </pre>
- */
+
 
 public class MyPanelListAdapter extends PanelListAdapter {
 

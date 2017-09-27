@@ -12,8 +12,6 @@ import com.smart.smartchart.ui.base.BaseFragment;
 
 public class MineFragment extends BaseFragment {
 
-
-
     @Override
     protected int getContentViewID() {
         return R.layout.fragment_mine;

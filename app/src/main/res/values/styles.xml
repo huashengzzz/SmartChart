@@ -10,7 +10,7 @@
     </style>
     <!-- 启动页的Theme-->
     <style name="AppSplashTheme" parent="AppBaseTheme">
-        <item name="android:windowBackground">@drawable/w_splash</item>
+        <item name="android:windowBackground">@null</item>
         <item name="android:windowFullscreen">true</item>
     </style>
 
