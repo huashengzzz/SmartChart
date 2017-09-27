@@ -16,6 +16,10 @@
 
 ![](https://github.com/huashengzzz/SmartChart/blob/master/images/three.gif)
 
+一周以及24小时天气预报
+
+![](https://github.com/huashengzzz/SmartChart/blob/master/images/four.gif)
+
 ## 折线图和柱状图
 
 项目中的柱状图和折线图集成的是[hellocharts-android](https://github.com/lecho/hellocharts-android)的核心代码，在此基础上增加一些修改。
@@ -163,6 +167,7 @@
     public SwipeRefreshLayout getSwipeRefreshLayout();
  ```
  
+## 24小时天气变化用的hellcharts所写，7天天气预报是自定义view 
  
 ## 感谢
 [hellocharts-android](https://github.com/lecho/hellocharts-android) 
